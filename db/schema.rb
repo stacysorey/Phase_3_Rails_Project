@@ -13,6 +13,8 @@
 ActiveRecord::Schema.define(version: 2021_05_04_171625) do
 
   create_table "entries", force: :cascade do |t|
+    t.string "title"
+    t.string "category"
     t.date "date"
     t.integer "journal_id"
     t.integer "user_id"
