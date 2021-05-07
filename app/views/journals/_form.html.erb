@@ -1,0 +1,11 @@
+<% if @journal.errors.any? %>
+  <%= render partial: '/errors', locals: {instance: @journal}%>
+<% end %>
+
+<%= form_for @journal do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <%= f.submit%>
+<% end %>
