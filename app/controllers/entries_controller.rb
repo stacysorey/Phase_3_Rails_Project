@@ -38,6 +38,12 @@ class EntriesController < ApplicationController
     redirect_to journal_path(@entry.journal_id)
   end
 
+  def destroy
+    @entry.destroy
+    flash[:notice] = "#{@entry.title} has been deleted"
+    redirect_to journal_path  #need to redirect to the journal that it was deleted from show page
+  end
+
   private
 
   def find_journal
