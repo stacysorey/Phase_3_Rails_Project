@@ -1,21 +1,21 @@
 class UsersController < ApplicationController
-  skip_before_action :verified_user, only: [:new, :create]
+  #skip_before_action :verified_user, only: [:new, :create]
+
+  #sign up: create new user
   def new
     @user = User.new
   end
 
   def create
-    @user = User.find_by(username:params[:username])
-      if !@user
-        @error = "Username is incorrect"
-        render :new
-      elsif !user.authenticate(params[:password])
-        @error = "Password is incorrect"
-        render :new
-      else
-        session[:user_id] = @user.id
-        redirect_to journals_path
-      end
+    @user = User.new(user_params)
+    if @user.save
+      flash[:message] = "User created successfully"
+      session[:user_id] = @user.id
+      redirect_to journal_path
+    else
+      @error = @user.errors.full_messages
+      render :new
+    end
   end
 
   private 

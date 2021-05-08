@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "/home", to: "static#home"
+  root('static#home') 
 
  #Restful Routes for Journals 
 resources :journals do 
@@ -9,7 +9,11 @@ end
 
 resources :users, only: [:new, :create]
 
-get "/logout", to: "sessions#logout", as: "logout"
+get "/login", to: "sessions#new"
+post "/login", to: "sessions#create"
+
+get "/logout", to: "sessions#logout", as: "logout" #change get to delete?
+
 get "/signup", to: "sessions#signup", as: "signup"
 post "/signup", to: "sessions#create"
 
