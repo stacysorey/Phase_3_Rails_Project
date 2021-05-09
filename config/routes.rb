@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   root('static#home') 
 
  #Restful Routes for Journals 
@@ -14,7 +15,7 @@ post "/login", to: "sessions#create"
 
 get "/logout", to: "sessions#logout", as: "logout" #change get to delete?
 
-get "/signup", to: "sessions#signup", as: "signup"
-post "/signup", to: "sessions#create"
+get "/signup", to: "users#new", as: "signup"
+post "/signup", to: "users#create"
 
 end

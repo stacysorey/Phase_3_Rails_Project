@@ -1,0 +1,5 @@
+#entry joint table 
+#new entry_type table
+#journal_id and entry_type_id in entry table
+#seed all of the entry types
+#collection select on journal show page

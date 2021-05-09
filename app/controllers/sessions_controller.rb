@@ -7,11 +7,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(params[:user][:username])
+    @user = User.find_by(username:params[:user][:username])
+    
       if !@user
         @error = "Username is incorrect"
         render :new
-      elsif !user.authenticate(params[:password])
+      elsif !@user.authenticate(params[:user][:password])
         @error = "Password is incorrect"
         render :new
       else

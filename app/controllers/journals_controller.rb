@@ -14,8 +14,9 @@ class JournalsController < ApplicationController
 
   def create
     @journal = Journal.new(journal_params)
+    @journal.user = current_user
     if @journal.save
-      redirect_to journal_path
+      redirect_to journals_path
     else
       flash.now[:error] = @journal.errors.full_messages
       render :new

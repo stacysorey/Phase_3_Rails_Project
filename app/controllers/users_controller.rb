@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:message] = "User created successfully"
       session[:user_id] = @user.id
-      redirect_to journal_path
+      redirect_to journals_path
     else
       @error = @user.errors.full_messages
       render :new

@@ -1,2 +1,6 @@
-<h1>Journals#new</h1>
-<p>Find me in app/views/journals/new.html.erb</p>
+<h1> New Journal </h1>
+<%= render partial: 'errors/errors', locals: {model: @journal } %>
+
+<%= render partial: 'form', locals: { form_title: "CREATE A NEW JOURNAL", model: @journal, button_name: "New Journal"  } %>
+
+
