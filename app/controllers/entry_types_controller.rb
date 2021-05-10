@@ -1,10 +1,10 @@
-class Entry_TypesController < ApplicationController
+class EntryTypesController < ApplicationController
 
   def new
 
   end
 
   def create 
-    
+
   end
 end 

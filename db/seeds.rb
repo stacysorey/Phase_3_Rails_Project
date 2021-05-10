@@ -14,11 +14,11 @@ Journal.create([
   { title: "Journal 3", user_id: user.id},
   ])
 
-Entry_type.create([
-  { type: "Daily Log"}, 
-  { type: "Fitness Tracker"}, 
-  { type: "Food Tracker"}, 
-  { type: "Week Planner"}
+EntryType.create([
+  { category: "Daily Log"}, 
+  { category: "Fitness Tracker"}, 
+  { category: "Food Tracker"}, 
+  { category: "Week Planner"},
 ])
 
 
