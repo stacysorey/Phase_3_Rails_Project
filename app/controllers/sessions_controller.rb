@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(email:params[:user][:email])
     
       if !@user
-        @error = "Username is incorrect"
+        @error = "Email is incorrect"
         render :new
       elsif !@user.authenticate(params[:user][:password])
         @error = "Password is incorrect"
