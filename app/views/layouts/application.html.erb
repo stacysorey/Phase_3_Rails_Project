@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsProject</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,16 +10,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <div>
+    <%= render partial: "layouts/sidebar" %>
+  </div>
+
   <body>
-    <nav>
-    <ul> 
-      <li><%= link_to("Home", root_path) %></li>
-      <li><%= link_to("Journals", journals_path) %></li>
-      <li><%= link_to("Login", login_path) %></li>
-      <li><%= link_to("Logout", logout_path) %></li>
-      <li><%= link_to("Signup", new_user_path) %></li>
-    </ul>
-    </nav>
     
     <% if flash[:error] %>
       <% flash[:error].each do |error| %>
@@ -30,4 +26,5 @@
     <%= yield %>
     
   </body>
+  
 </html>
