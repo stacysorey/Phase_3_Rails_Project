@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light bg-light">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-<div class="sidebar">
+<!---<div class="sidebar"> -->
 <br>
 <p style="margin-left: 18px">Welcome, <%= current_user.name %>!</p> 
 <%= link_to("Home", root_path) %>
@@ -11,8 +11,9 @@
 <% else %>
 <%= link_to("Login", login_path) %>
 <%= link_to("Signup", new_user_path) %>
+<!--add googleauth link-->
 <% end %>
-</div>
+<!---</div>-->
  </ul>
     </div>
 </nav>
