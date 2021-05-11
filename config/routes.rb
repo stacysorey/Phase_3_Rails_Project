@@ -19,4 +19,7 @@ get "/logout", to: "sessions#logout", as: "logout" #change get to delete?
 get "/signup", to: "users#new", as: "signup"
 post "/signup", to: "users#create"
 
+
+match '/auth/:google_oauth2/callback' => 'sessions#google', via: [:get,:post]
+#goes to specific route, can be multiple routes at once: get/post/patch/delete/etc
 end

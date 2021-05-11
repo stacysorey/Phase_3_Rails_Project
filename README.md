@@ -1,24 +1,39 @@
-# README
+# Easy Journal
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Easy Journal is a Ruby on Rails designed web application for quickly and easily keeping track of your life.
 
-Things you may want to cover:
+Users can create an account and sign in manually or login through their Google account. 
 
-* Ruby version
+## Prerequisites
+The setups steps expect following tools installed on the system.
 
-* System dependencies
+Github
 
-* Configuration
+Ruby 2.6.1
 
-* Database creation
+Rails 6.1.3
 
-* Database initialization
+## Clone the Repository
 
-* How to run the test suite
+```bash 
+git clone https://github.com/stacysorey/Phase_3_Rails_Project
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Installation
 
-* Deployment instructions
+Upon initiliazation:
 
-* ...
+```bash
+bundle install
+```
+
+## Usage
+
+To open web application:
+
+```
+rails s
+```
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
