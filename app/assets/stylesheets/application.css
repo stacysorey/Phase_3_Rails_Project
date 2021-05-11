@@ -15,58 +15,202 @@
  */
 
  /* The side navigation menu */
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-}
+ @media screen {
+  /* --- Reset Styles --- */
+  * {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-/* Sidebar links */
-.sidebar a {
-  display: block;
-  color: black;
-  padding: 16px;
-  text-decoration: none;
-}
-
-/* Active/current link */
-.sidebar a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-/* Links on mouse-over */
-.sidebar a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
-
-/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
-}
-
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 700px) {
-  .sidebar {
+  html, body {
+    height: 100%;
     width: 100%;
-    height: auto;
-    position: relative;
   }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
+
+  
+
+  /* --- Welcome Page Styles --- */
+  body {
+    background-color: rgb(255, 255, 255);
+    color: #333;
+    font-family: Sans-Serif;
+    line-height: 18px;
+  }
+
+  img {
+    border-radius: 12px;
+  }
+
+  .wrapper {
+    background: rgb(255, 255, 255);
+    
+    margin: 16px auto;
+    max-width: 960px;
+    padding: 2.25%; /* 18px / 800px */
+    width: 85%;
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 54px;
+  }
+
+  h2 {
+    
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 36px;
+  }
+
+  p {
+    margin-bottom: 18px;
+  }
+
+  .main {
+    overflow: hidden;
+  }
+
+  .content {
+    float: left;
+    width: 60%; /* 480px / 800px */
+  }
+
+  .sidebar {
+    background: #E5E4E2;
+    border: 2px solid #e7e7e7;
+    border-radius: 12px;
+    float: right;
+    padding: 2.08333333333%; /* 5px / 240px */
+    width: 35%; /* 240px / 800px */
+  }
+
+  .sidebar ul {
+    font-size: 14px;
+  }
+
+  .branding {
+    clear: both;
+  }
+
+  footer.branding {
+    
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .button {
+    border: none;
+    color: black;
+    background-color:white;
+    width: 250px;
+    padding: 10px 24px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .button2 {
+    border: 2px solid black;
+    color: black;
+    background-color:white;
+    width: 250px;
+    padding: 10px 24px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .button3 {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    padding: 10px 24px;
+    text-align: left;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .button4 {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .button5 {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+    padding: 10px 24px;
+    text-align: left;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  
+  .button4:hover {background-color: #e7e7e7;}
+  .button1 {background-color: #e7e7e7;} 
+  .button2:hover {background-color: #e7e7e7;} 
+  .button3 {background-color: white;}
+
+  
+
 }
 
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
+@media screen and (max-width: 600px) {
+  
+  .wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: auto;
   }
+
+  .content, .sidebar {
+    float: none;
+    width: 100%;
+  }
+
+  .sidebar {
+    background: transparent;
+    border: none;
+    border-top: 2px solid #ccc;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  
+ 
 }
+

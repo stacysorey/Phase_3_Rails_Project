@@ -1,6 +1,6 @@
-# Easy Journal
+# Simple Journal
 
-Easy Journal is a Ruby on Rails designed web application for quickly and easily keeping track of your life.
+Simple Journal is a Ruby on Rails designed web application for quickly and easily keeping track of your life.
 
 Users can create an account and sign in manually or login through their Google account. 
 

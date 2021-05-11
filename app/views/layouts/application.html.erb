@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,10 +14,10 @@
 
   <body>
     
- 
-    <%= content_tag("p", flash[:notice]) if flash[:notice] %>
-    <%= yield %>
-    
+    <div class="wrapper">
+      <%= content_tag("p", flash[:notice]) if flash[:notice] %>
+      <%= yield %>
+    </div>
   </body>
   
 </html>

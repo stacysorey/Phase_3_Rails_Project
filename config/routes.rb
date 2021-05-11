@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :events
   root('static#home') 
 
  #Restful Routes for Journals 

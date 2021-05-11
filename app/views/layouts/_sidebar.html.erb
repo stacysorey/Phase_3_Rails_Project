@@ -3,22 +3,17 @@
     <%= link_to("Home", root_path) %>
   </li>
   <% if logged_in? %>
-    <p style="margin-left: 18px">Welcome, <%= current_user.name %>!</p>
-    <li> 
-      <%= link_to("Journals", journals_path) %>
-    </li>
-    <li>
-      <%= link_to("Logout", logout_path) %>
-    </li>
+    <a class="button5 button3"><b> welcome, <%= current_user.name %>!&#128172;</b></a>
+      <!--<%= link_to("Journals", journals_path) %>-->
+      <a class="button4 button4" href="/journals"><b>journals</b></a>
+      <!--<%= link_to("Logout", logout_path) %>-->
+      <a class="button4 button4" href="/logout"><b>logout</b></a>
   <% else %>
-    <li>
-      <%= link_to("Sign In", login_path) %>
-    </li>
-    <li>
-      <%= link_to("Signup", new_user_path) %>
-    </li>  
-    <li>
-      <%= link_to "Sign In with Google", '/auth/google_oauth2', method: :post%> 
-    </li>
+      <!--<%= link_to("Sign In", login_path) %>-->
+      <a class="button4 button4" href="/login"><b>login</b></a>
+      <!--<%= link_to("Signup", new_user_path) %>-->
+      <a class="button4 button4" href="/signup"><b>sign up</b></a>
+      <%= link_to "Sign In with Google", '/auth/google_oauth2', method: :post%> <!--NOT SHOWING-->
+    
   <% end %>
 </nav>
