@@ -38,7 +38,7 @@ class JournalsController < ApplicationController
   def destroy
     @journal.destroy
     flash[:notice] = "#{@journal.title} has been deleted"
-    redirect_to journal_path
+    redirect_to journals_path
   end
 
   private
