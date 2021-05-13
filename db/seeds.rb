@@ -13,7 +13,7 @@ Journal.create([
   { title: "Journal 2", user_id: user.id},
   { title: "Journal 3", user_id: user.id},
   ])
-  
+
 #created journals twice? is this bc I seeded twice?
 
 EntryType.create([
@@ -23,4 +23,13 @@ EntryType.create([
   { category: "Week Planner"},
 ])
 
+#figure out how to assign entry_type_id to entries and connect the ^ above categories to the entry_type_id??
 
+Entry.create([
+  { title: "entry 1", user_id: user.id, journal_id: journal.id, date: Date.today, description: "this is a test entry to see if this is working!!"}
+  { title: "entry 2", user_id: user.id, journal_id: journal.id, date: Date.today, description: "this is a test entry to see if this is working!!"}
+  { title: "entry 3", user_id: user.id, journal_id: journal.id, date: Date.today, description: "this is a test entry to see if this is working!!"}
+  { title: "entry 4", user_id: user.id, journal_id: journal.id, date: Date.today, description: "this is a test entry to see if this is working!!"}
+  { title: "entry 5", user_id: user.id, journal_id: journal.id, date: Date.today, description: "this is a test entry to see if this is working!!"}
+])
+#NOT WORKING

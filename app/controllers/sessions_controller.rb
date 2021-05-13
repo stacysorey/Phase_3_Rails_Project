@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
   #skip_before_action :verified_user, only: [:new, :create]
 
+  #giving me access to journals index when not signed in 
+
 
   def new
     #just creates a new session

@@ -3,8 +3,8 @@
 
 <!-- I should add a description for the journals ---------------------------------------------------------------->
 
-<%= link_to "Edit", edit_journal_path(@journal) %>
-<%= link_to "Delete", journal_path(@journal), method: "delete" %>
-<%= link_to "Create an Entry", new_journal_entry_path(@journal) %>
+<%= link_to "edit journal", edit_journal_path(@journal) %>
+<%= link_to "delete journal", journal_path(@journal), method: "delete" %>
+<%= link_to "create an entry", new_journal_entry_path(@journal) %>
 
 <%= link_to 'back', journals_path %>

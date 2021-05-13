@@ -1,8 +1,8 @@
-<h1>All Journals</h1>
+<h1>my journals</h1>
 
 <ul>
   <% @journal.each do |journal| %> 
-    <li><%= link_to journal.title, journal_path(journal) %></li>
+    <li><%= link_to journal.title, journal_path(journal), class: "button5" %></li>
   <% end %>
 </ul>
 
