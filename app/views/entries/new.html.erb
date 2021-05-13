@@ -1,2 +1,6 @@
-<h1>Entries#new</h1>
-<p>Find me in app/views/entries/new.html.erb</p>
+<h1> New Entry </h1>
+<%= render partial: 'errors/errors', locals: {model: @entry } %>
+
+<%= render partial: 'form', locals: { form_title: "CREATE A NEW ENTRY", model: @entry, button_name: "New Entry"  } %>
+
+

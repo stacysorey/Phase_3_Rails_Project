@@ -1,0 +1,15 @@
+<%= form_for @entry do |f| %>
+  <div>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :date %><br>
+    <%= f.date :date %>
+  </div>
+  <div>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <%= f.submit%>
+<% end %>
