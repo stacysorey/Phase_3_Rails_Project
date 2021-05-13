@@ -28,14 +28,14 @@
     width: 100%;
   }
 
-  
-
   /* --- Welcome Page Styles --- */
   body {
     background-color: rgb(255, 255, 255);
     color: #333;
     font-family: Sans-Serif;
     line-height: 18px;
+    
+
   }
 
   img {
@@ -44,11 +44,13 @@
 
   .wrapper {
     background: rgb(255, 255, 255);
-    
-    margin: 16px auto;
-    max-width: 960px;
-    padding: 2.25%; /* 18px / 800px */
-    width: 85%;
+    border-radius: 25px;
+    border: 2px solid #bebebe;
+    padding: 50px;
+    height: 50%;
+    margin: 20px auto;
+    width: 60%;
+    box-shadow: 10px 10px #444444;
   }
 
   h1 {
@@ -83,7 +85,7 @@
 
   .sidebar {
     background: #E5E4E2;
-    border: 2px solid #e7e7e7;
+    border: 2px solid #bebebe;
     border-radius: 12px;
     float: right;
     padding: 2.08333333333%; /* 5px / 240px */
@@ -92,16 +94,6 @@
 
   .sidebar ul {
     font-size: 14px;
-  }
-
-  .branding {
-    clear: both;
-  }
-
-  footer.branding {
-    
-    margin-top: 20px;
-    padding-top: 20px;
   }
 
   .button {
@@ -116,6 +108,7 @@
     border-radius: 12px;
     font-size: 16px;
     cursor: pointer;
+    box-shadow: 5px 5px #444444;
   }
 
   .button2 {
@@ -130,12 +123,13 @@
     border-radius: 12px;
     font-size: 16px;
     cursor: pointer;
+    box-shadow: 5px 5px #444444;
   }
 
   .button3 {
     background-color: white;
     color: black;
-    border: 2px solid #e7e7e7;
+    border: 2px solid #bebebe;
     padding: 10px 24px;
     text-align: left;
     border-radius: 12px;
@@ -147,7 +141,7 @@
   .button4 {
     background-color: white;
     color: black;
-    border: 2px solid #e7e7e7;
+    border: 2px solid #bebebe;
     padding: 10px 24px;
     text-align: center;
     text-decoration: none;
@@ -156,6 +150,7 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    box-shadow: 5px 5px #444444;
   }
 
   .button5 {
@@ -170,47 +165,17 @@
     font-size: 16px;
   }
   
-  .button4:hover {background-color: #e7e7e7;}
-  .button1 {background-color: #e7e7e7;} 
-  .button2:hover {background-color: #e7e7e7;} 
-  .button3 {background-color: white;}
+  .button4:hover {background-color: #bebebe;}
+  .button1 {background-color: #bebebe;} 
+  .button2:hover {background-color: #bebebe;} 
+
 
   
 
 }
 
-@media screen and (max-width: 600px) {
-  
-  .wrapper {
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    width: auto;
-  }
-
-  .content, .sidebar {
-    float: none;
-    width: 100%;
-  }
-
-  .sidebar {
-    background: transparent;
-    border: none;
-    border-top: 2px solid #ccc;
-    padding: 0;
-  }
-
-  h1 {
-    font-size: 24px;
-    line-height: 36px;
-  }
-
-  h2 {
-    font-size: 18px;
-    line-height: 24px;
-  }
 
   
  
-}
+
 

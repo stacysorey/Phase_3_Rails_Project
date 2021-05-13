@@ -1,19 +1,13 @@
 <nav>
-  <li>
-    <%= link_to("Home", root_path) %>
-  </li>
+   <a class="button4 button4" href="/"><b>home</b></a>
   <% if logged_in? %>
-    <a class="button5 button3"><b> welcome, <%= current_user.name %>!&#128172;</b></a>
-      <!--<%= link_to("Journals", journals_path) %>-->
       <a class="button4 button4" href="/journals"><b>journals</b></a>
-      <!--<%= link_to("Logout", logout_path) %>-->
       <a class="button4 button4" href="/logout"><b>logout</b></a>
+      <a class="button5 button3"><b> welcome, <%= current_user.name %>!&#128172;</b></a>
   <% else %>
-      <!--<%= link_to("Sign In", login_path) %>-->
       <a class="button4 button4" href="/login"><b>login</b></a>
-      <!--<%= link_to("Signup", new_user_path) %>-->
       <a class="button4 button4" href="/signup"><b>sign up</b></a>
       <%= link_to "Sign In with Google", '/auth/google_oauth2', method: :post%> <!--NOT SHOWING-->
-    
+  <!----<a class="button4 button4" href="/auth/:google_oauth2/callback"><b>sign in with Google</b></a>----------->
   <% end %>
 </nav>
