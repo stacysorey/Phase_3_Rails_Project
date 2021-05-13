@@ -1,9 +1,13 @@
 <h1><%=@journal.title%></h1><br>
-<h2><%= @journal.description%></h2>
+<h3><%= @journal.description%></h3>
 
 <!-- I should add a description for the journals ---------------------------------------------------------------->
+<div class="btn-holder">
+<%= link_to "edit journal", edit_journal_path(@journal), class: "b8" %>
+<%= link_to "delete journal", journal_path(@journal), method: "delete", class: "b7" %>
+</div>
 
-<%= link_to "edit journal", edit_journal_path(@journal), class: "b4" %>
-<%= link_to "delete journal", journal_path(@journal), method: "delete", class: "b3" %>
+<div class= "bctr">
 <%= link_to "create an entry", new_journal_entry_path(@journal), class: "b4" %>
 <%= link_to 'back', journals_path, class: "b4" %>
+</div>

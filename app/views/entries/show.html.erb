@@ -4,7 +4,7 @@
 <h1> <%= @entry.title%></h1>
 <h1> <%= @entry.date%></h1>
 <h1> <%= @entry.category%></h1>
-<h1> <%= @entry.description%></h1>
+<h3> <%= @entry.description%></h3>
 
 
 <%= link_to "Edit Your Entry", edit_journal_entry_path(@journal.id, @entry.id) %>
