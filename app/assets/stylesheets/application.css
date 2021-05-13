@@ -96,7 +96,7 @@
     font-size: 14px;
   }
 
-  .button {
+  .b {
     border: none;
     color: black;
     background-color:white;
@@ -112,7 +112,7 @@
     box-shadow: 5px 5px #444444;
   }
 
-  .button2 {
+  .b2 {
     border: 2px solid black;
     color: black;
     background-color:white;
@@ -127,10 +127,10 @@
     box-shadow: 5px 5px #444444;
   }
 
-  .button3 {
+  .b3 {
     background-color: white;
     color: black;
-    border: 2px solid #bebebe;
+    border: 2px solid #990000;
     padding: 10px 24px;
     text-align: left;
     border-radius: 12px;
@@ -138,9 +138,10 @@
     display: inline-block;
     font-size: 16px;
     font-weight: bold;
+    box-shadow: 5px 5px #721111;
   }
 
-  .button4 {
+  .b4 {
     background-color: white;
     color: black;
     font-weight: bold;
@@ -157,11 +158,24 @@
   }
   
 
-  .button5 {
+  .b5 {
     background-color: white;
     color: black;
     border: 2px solid white;
-    padding: 10px 24px;
+    padding: 10px 100px 10px 5px;
+    text-align: left;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .b6 {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+    padding: 10px 100px 10px 5px;
     text-align: left;
     border-radius: 12px;
     text-decoration: none;
@@ -170,9 +184,12 @@
     font-weight: bold;
   }
   
-  .button4:hover {background-color: #bebebe;}
-  .button1 {background-color: #bebebe;} 
-  .button2:hover {background-color: #bebebe;} 
+ 
+  .b1 {background-color: #dedede;} 
+  .b2:hover {background-color: #dedede;} 
+  .b3:hover {background-color: #D18C8C;}
+  .b4:hover {background-color: #dedede;}
+  .b6:hover {background-color: #dedede;}
 
 
 

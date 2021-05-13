@@ -1,12 +1,12 @@
 <nav>
-  <%= link_to("home", root_path, class: "button4 button4")%>
+  <%= link_to("home", root_path, class: "b4")%>
   <% if logged_in? %>
-    <%= link_to("journals", journals_path, class: "button4 button4") %>
-    <%= link_to("logout", logout_path, class: "button4 button4") %>
-    <a class="button5 button3"><b> welcome, <%= current_user.name %>!&#128172;</b></a>
+    <%= link_to("journals", journals_path, class: "b4") %>
+    <%= link_to("logout", logout_path, class: "b4") %>
+    <a class="b5"><b> welcome, <%= current_user.name %>!&#128172;</b></a>
   <% else %>
-    <%= link_to("sign in", login_path, class: "button4 button4") %>
-    <%= link_to("sign up", new_user_path, class: "button4 button4") %>
-    <%= link_to "sign in with Google", '/auth/google_oauth2', method: :post, class: "button4 button4" %> <!--NOT SHOWING-->
+    <%= link_to("sign in", login_path, class: "b4") %>
+    <%= link_to("sign up", new_user_path, class: "b4") %>
+    <%= link_to "sign in with Google", '/auth/google_oauth2', method: :post, class: "b4" %> <!--NOT SHOWING-->
   <% end %>
 </nav>
