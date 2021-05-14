@@ -13,7 +13,7 @@
 <div class= "bctr">
   <%= link_to "create a journal", new_journal_path(@journal), class: "b4" %>
   
-
+<!---app/views/journals/index.html.erb---->
   <%= form_with(url: search_path, method: 'get', class: "b11") do |f|%>
     <%= f.text_field :title, placeholder: "search for journal title", class: "b10"%>
     <%= f.submit :search, class: "b10" %>
