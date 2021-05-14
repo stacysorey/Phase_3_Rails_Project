@@ -1,5 +1,6 @@
 <h1>edit <%= @entry.title %> &#128395;</h1>
 
 
-<!-------ERROR
-<%= render partial: 'form', locals: { form_title: "Edit Journal", model: @entry, button_name: "EDIT ENTRY"  } %> ----->
+<%= render partial: 'form', locals: {model: @entry, url: journal_entries_path(@journal), journal: @journal } %>
+
+<!---edit entry leading to error-->

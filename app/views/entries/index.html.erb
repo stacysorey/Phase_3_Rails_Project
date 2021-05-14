@@ -2,8 +2,3 @@
 <p>Find me in app/views/entries/index.html.erb</p>
 
 
-<ul>
-  <% @journal.entries.each do |entry| %> 
-    <li><%= link_to entry.title, journal_entry_path(entry) %></li>
-  <% end %>
-</ul>

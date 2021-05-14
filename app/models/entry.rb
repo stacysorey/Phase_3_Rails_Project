@@ -8,6 +8,4 @@ class Entry < ApplicationRecord
 
   scope :most_recent, -> { order created_at: :desc }
 
-  scope :find_entry, -> { self.where("title LIKE ?", "%" + params[:q] + "%") }
-
 end

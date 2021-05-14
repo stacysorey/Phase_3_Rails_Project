@@ -9,6 +9,10 @@ class EntriesController < ApplicationController
     #see if I need an index page for all entries--> where will this be shown (user flow)
   end
 
+  def search
+    @entry = Entry.search(params[:title])
+    render :index
+  end
 
 #i want every invalid page to link to login??
 

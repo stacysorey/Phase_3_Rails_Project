@@ -51,7 +51,7 @@
     border: 2px solid #505050;
     padding: 50px;
     height: auto;
-    margin: 40px auto;
+    margin: 80px auto;
     width: 60%;
     box-shadow: 10px 10px #505050;
   }
@@ -63,6 +63,7 @@
 
   .wrapper .bctr {
     position: fixed;
+    margin: 40px auto;
     top: 20px;
     right: 20px;
   }
@@ -269,6 +270,37 @@
     cursor: pointer;
     box-shadow: 5px 5px #505050;
   }
+
+  .b10 {
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #505050;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .b11 {
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #505050;
+    padding: 1px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    font-size: 12px;
+    margin: 2px 2px;
+    cursor: pointer;
+    box-shadow: 5px 5px #505050;
+  }
  
   .b1 {background-color: #dedede;} 
   .b2:hover {
@@ -296,6 +328,11 @@
     color: #444444;
   }
   .b9:hover {
+    background-color: #dedede;
+    color: #444444;
+  }
+
+  .b10:hover {
     background-color: #dedede;
     color: #444444;
   }
