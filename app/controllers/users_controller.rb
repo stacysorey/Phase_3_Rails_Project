@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to journals_path
     else
-      @error = @user.errors.full_messages
+      flash.now[:error] = @user.errors.full_messages[0]
       render :new
     end
   end
