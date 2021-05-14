@@ -10,13 +10,13 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by(email:params[:user][:email])
     if !@user
-      @error = "Email is incorrect"
+      @error = "email is incorrect"
       render :new
     elsif !@user.authenticate(params[:user][:password])
-      @error = "Password is incorrect"
+      @error = "password is incorrect"
       render :new
     else
-      flash[:message] = "Successfully signed in"
+      flash[:message] = "successfully signed in"
       session[:user_id] = @user.id
       redirect_to journals_path
     end
@@ -28,20 +28,22 @@ class SessionsController < ApplicationController
   end
 
   def google
+    
     #won't let me login "credentials error"
-    @user = User.find_or_create_by(email: auth["info"]["email"]) do |u|
-      u.email = auth["info"]["email"]
-      u.username = auth["info"]["name"]
-      u.name = auth["info"]["name"]
+    @user = User.find_or_create_by(email: auth[:info][:email]) do |u|
+      
+      u.email = auth[:info][:email]
+      u.username = auth[:info][:name]
+      u.name = auth[:info][:name]
       u.password = SecureRandom.hex(8)
     end
   
     if @user.valid?
-      flash[:messsage] = "Signed In with Google"
+      flash[:messsage] = "signed in with Google"
       session[:user_id] = @user.id
       redirect_to journals_path
     else
-      flash[:message] = "Credential Error"
+      flash[:message] = "credential error"
       redirect_to login_path
     end
   end 

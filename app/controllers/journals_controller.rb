@@ -2,6 +2,11 @@ class JournalsController < ApplicationController
   before_action :require_login
   before_action :find_journal, only: [:show, :edit, :update, :destroy]
 
+  def search
+    @journal = Journal.search(params[:title])
+    render :index
+  end
+
   def index
       @journal = current_user.journals
   end
