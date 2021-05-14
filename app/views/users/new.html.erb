@@ -2,12 +2,12 @@
 
 <%= form_with(model: @user, url: signup_path)  do |f|%>
     <%= f.label :name %>
-    <%= f.text_field :name %><br> 
+    <%= f.text_field :name, class: "b10" %><br> 
     <%= f.label :email %>
-    <%= f.text_field :email %><br>
+    <%= f.text_field :email, class: "b10" %><br>
     <%= f.label :username %>
-    <%= f.text_field :username %><br>
+    <%= f.text_field :username, class: "b10" %><br>
     <%= f.label :password %>
-    <%= f.password_field :password %><br>
-    <%= f.submit "sign up" %>
+    <%= f.password_field :password, class: "b10" %><br>
+    <%= f.submit "sign up", class: "b10" %>
 <% end %>

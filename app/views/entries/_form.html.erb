@@ -1,23 +1,28 @@
 <%= form_for object, url:url do |f| %>
   <div>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "b10" %>
   </div>
+  <br>
   <div>
-    <%= f.label :category %><br>
+    <%= f.label :category %>
     <%= f.collection_select :entry_type_id, EntryType.all, :id, :category %>
   </div>
+  <br>
   <div>
-    <%= f.label :date %><br>
-    <%= f.date_field :date %>
+    <%= f.label :date %>
+    <%= f.date_field :date, class: "b10" %>
   </div>
+  <br>
   <div>
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class: "b10" %>
   </div>
+  <br>
   <div>
     <%= f.hidden_field :journal_id, value: journal.id %>
     <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
-  <%= f.submit %>
+  <br>
+  <%= f.submit class: "b10" %>
 <% end %>

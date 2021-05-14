@@ -1,9 +1,9 @@
-<h1> login </h1>
+<h1> sign in </h1>
 
 <%= form_with(scope: :user, url: login_path)  do |f|%>
     <%= f.label :email %>
-    <%= f.text_field :email %><br>
+    <%= f.text_field :email, class: "b10" %><br>
     <%= f.label :password %>
-    <%= f.password_field :password %><br>
-    <%= f.submit "sign in" %>
+    <%= f.password_field :password, class: "b10" %><br>
+    <%= f.submit "sign in", class: "b10" %>
 <% end %>

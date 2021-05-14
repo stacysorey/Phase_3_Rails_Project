@@ -1,6 +1,16 @@
-<h1>all entries</h1>
+<h1>all entries for <%= @journal.title %></h1>
 
+<div class= "bctr">
+<%= link_to "create an entry", new_journal_entry_path(@journal), class: "b4" %> 
+</div>
+
+<div>
 <% @entries.each do |entry|%>
-  <%= link_to entry.title, journal_entry_path(@journal, entry) %>
+  <li>
+  <%= format_date(entry) %>
+  <b><%= entry.entry_type.category %></b>
+  <%= link_to entry.title, journal_entry_path(@journal, entry), class: "b8" %>
+  </li>
 <% end %>
+</div>
 

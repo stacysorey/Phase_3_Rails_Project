@@ -1,10 +1,19 @@
 <h1><%=@journal.title%></h1><br>
-<h3><%= @journal.description%></h3>
+<li><i>description: <%= @journal.description%></i></li><br>
+<div>
+  <% @journal.entries.each do |entry|%>
+    <li>
+    <%= format_date(entry) %>
+    <%= link_to entry.title, journal_entry_path(@journal, entry), class: "b8" %>
+    </li>
+  <% end %>
+</div>
 
 <div class="btn-holder">
 <%= link_to "edit journal", edit_journal_path(@journal), class: "b8" %>
 <%= link_to "delete journal", journal_path(@journal), method: "delete", class: "b7" %>
 </div>
+
 
 <div class= "bctr">
 <%= link_to "create an entry", new_journal_entry_path(@journal), class: "b4" %>

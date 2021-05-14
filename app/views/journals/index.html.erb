@@ -2,9 +2,10 @@
 <p>
 <ul>
   <% @journal.each do |journal| %> 
-    <li><%= journal.created_at.to_date %><%= link_to journal.title, journal_path(journal), class: "b6" %> </li>
-    
-    <a class="b5"><%= journal.description %></a>
+    <li>
+    <%= format_created_at(journal) %><%= link_to journal.title, journal_path(journal), class: "b8" %> 
+    </li>
+    <i>description:</i> <a class="b5"><%= journal.description %></a>
   <% end %>
 </ul>
 </p>

@@ -1,11 +1,13 @@
 <%= form_for @journal do |f| %>
   <div>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "b10" %>
   </div>
+  <br>
   <div>
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_field :description, class: "b10" %>
   </div>
-  <%= f.submit%>
+  <br>
+  <%= f.submit class: "b10" %>
 <% end %>
