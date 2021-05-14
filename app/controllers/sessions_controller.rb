@@ -1,7 +1,4 @@
 class SessionsController < ApplicationController
-  
-#destroy sesssion after ending?? 
-
 
   def new
     #just creates a new session
@@ -28,17 +25,14 @@ class SessionsController < ApplicationController
   end
 
   def google
-    
-    #won't let me login "credentials error"
     @user = User.find_or_create_by(email: auth[:info][:email]) do |u|
-      
       u.email = auth[:info][:email]
       u.username = auth[:info][:name]
       u.name = auth[:info][:name]
       u.password = SecureRandom.hex(8)
     end
-  
-    if @user.valid?
+
+    if @user
       flash[:messsage] = "signed in with Google"
       session[:user_id] = @user.id
       redirect_to journals_path

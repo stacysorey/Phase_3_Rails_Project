@@ -3,7 +3,7 @@ class JournalsController < ApplicationController
   before_action :find_journal, only: [:show, :edit, :update, :destroy]
 
   def search
-    @journal = Journal.search(params[:title])
+    @journal = Journal.search(params[:title]).select { |j| j.user_id == current_user.id }
     render :index
   end
 
