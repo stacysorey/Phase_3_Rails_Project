@@ -1,15 +1,23 @@
-<%= form_for @entry do |f| %>
+<%= form_for model, url:url do |f| %>
   <div>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
   <div>
+    <%= f.label :category %><br>
+    <%= f.collection_select :entry_type_id, EntryType.all, :id, :category %>
+  </div>
+  <div>
     <%= f.label :date %><br>
-    <%= f.date :date %>
+    <%= f.date_field :date %>
   </div>
   <div>
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div>
+    <%= f.hidden_field :journal_id, value: journal.id %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
   <%= f.submit%>
 <% end %>

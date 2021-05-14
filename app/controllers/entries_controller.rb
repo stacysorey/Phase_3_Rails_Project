@@ -1,11 +1,17 @@
 class EntriesController < ApplicationController
-  before_action :find_journal, only: [:show, :new, :edit]
+  before_action :require_login
+  before_action :find_journal, only: [:show, :new, :create, :edit]
   before_action :find_entry, only: [:show, :edit, :update, :destroy]
 
   #/journals/:journal_id/entries
   def index
+    @entries = current_user.entries
     #see if I need an index page for all entries--> where will this be shown (user flow)
   end
+
+
+#i want every invalid page to link to login??
+
 
   #/journals/:journal_id/entries/:id
   def show
@@ -17,17 +23,17 @@ class EntriesController < ApplicationController
   end
 
   def create
-    @entry = Entry.new
+    @entry = Entry.new(entry_params)
     #/journals/:journal_id/entries/:id
     if @entry.save
       redirect_to journal_entry_path(params[:journal_id], @entry)
     else
-      flash.now[:error] = @entry.errors.full_messages
+      flash.now[:error] = @entry.errors.full_messages[0]
       render :new
     end
   end
 
-  def edit
+  def edit 
   end
 
   def update
@@ -53,7 +59,7 @@ class EntriesController < ApplicationController
     end
 
     def entry_params
-     params.require(:entry).permit(:title, :date, :category) #not requiring a description
+     params.require(:entry).permit(:title, :date, :description, :entry_type_id, :journal_id, :user_id) #not requiring a description
     end
-    
+
 end

@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_11_095051) do
+ActiveRecord::Schema.define(version: 2021_05_10_144915) do
 
   create_table "entries", force: :cascade do |t|
     t.string "title"
-    t.string "category"
     t.date "date"
     t.integer "journal_id"
     t.integer "user_id"
@@ -26,14 +25,6 @@ ActiveRecord::Schema.define(version: 2021_05_11_095051) do
 
   create_table "entry_types", force: :cascade do |t|
     t.string "category"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "events", force: :cascade do |t|
-    t.string "name"
-    t.datetime "start_time"
-    t.datetime "end_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

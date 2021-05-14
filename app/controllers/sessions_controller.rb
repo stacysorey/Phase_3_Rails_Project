@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
-  #skip_before_action :verified_user, only: [:new, :create]
-
-  #giving me access to journals index when not signed in 
+  
+#destroy sesssion after ending?? 
 
 
   def new
@@ -29,7 +28,7 @@ class SessionsController < ApplicationController
   end
 
   def google
-    #isn't letting me sign in -- keeps redirecting to login
+    #won't let me login "credentials error"
     @user = User.find_or_create_by(email: auth["info"]["email"]) do |u|
       u.email = auth["info"]["email"]
       u.username = auth["info"]["name"]

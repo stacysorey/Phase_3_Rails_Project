@@ -1,8 +1,9 @@
 class JournalsController < ApplicationController
+  before_action :require_login
   before_action :find_journal, only: [:show, :edit, :update, :destroy]
 
   def index
-    @journal = Journal.all
+      @journal = current_user.journals
   end
 
   def show
@@ -18,7 +19,7 @@ class JournalsController < ApplicationController
     if @journal.save
       redirect_to journals_path
     else
-      flash.now[:error] = @journal.errors.full_messages
+      flash.now[:error] = @journal.errors.full_messages[0]
       render :new
     end
   end

@@ -3,8 +3,13 @@
 
 <h1> <%= @entry.title%></h1>
 <h1> <%= @entry.date%></h1>
-<h1> <%= @entry.category%></h1>
+<h1> <%= @entry.entry_type.category%></h1>
 <h3> <%= @entry.description%></h3>
 
+<div class= "bctr">
+<%= link_to "Edit Your Entry", edit_journal_entry_path(@journal.id, @entry.id), class: "b4" %>
 
-<%= link_to "Edit Your Entry", edit_journal_entry_path(@journal.id, @entry.id) %>
+
+<!---back button cycling
+<%= link_to 'back', journals_path, class: "b4" %>
+</div>-->
